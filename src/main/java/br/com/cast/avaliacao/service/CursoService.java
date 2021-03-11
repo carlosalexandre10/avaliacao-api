@@ -47,7 +47,7 @@ public class CursoService {
 
 		if (optional.isPresent()) {
 			Curso cursoSalvo = optional.get();
-
+			
 			cursoSalvo.setDescricao(curso.getDescricao());
 			cursoSalvo.setDataInicio(curso.getDataInicio());
 			cursoSalvo.setDataTermino(curso.getDataTermino());

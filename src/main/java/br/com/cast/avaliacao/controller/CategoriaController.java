@@ -12,7 +12,7 @@ import br.com.cast.avaliacao.dtos.CategoriaDTO;
 import br.com.cast.avaliacao.service.CategoriaService;
 
 @RestController
-@RequestMapping("categorias")
+@RequestMapping("/categorias")
 public class CategoriaController {
 	
 	@Autowired
