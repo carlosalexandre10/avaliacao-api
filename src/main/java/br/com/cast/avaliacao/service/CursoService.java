@@ -19,6 +19,11 @@ public class CursoService {
 	@Autowired
 	private CursoRepository cursoRepository;
 
+	public List<CursoDTO> listar() {
+		return this.cursoRepository.findAll().stream().map(CursoDTO::create)
+				.collect(Collectors.toList());
+	}
+	
 	public List<CursoDTO> pesquisarPorDescricao(String descricao) {
 		return this.cursoRepository.findByDescricao(descricao).stream().map(CursoDTO::create)
 				.collect(Collectors.toList());
@@ -27,6 +32,12 @@ public class CursoService {
 	public CursoDTO incluir(Curso curso) {
 		Assert.isNull(curso.getId(), "Não foi possível inserir o registro");
 		
+		Integer cursosDentroDoMesmoPeriodo = this.cursoRepository.cursosDentroDoMesmoPeriodo(curso.getDataInicio(), curso.getDataTermino());
+		if (cursosDentroDoMesmoPeriodo > 0) {
+			throw new IllegalArgumentException(
+					"Não será permitida a inclusão de cursos dentro do mesmo período");
+		}
+
 		if (curso.getDataInicio().isBefore(LocalDateTime.now())) {
 			throw new IllegalArgumentException(
 					"Não será permitida a inclusão de cursos com a data de início menor que a data atual");
