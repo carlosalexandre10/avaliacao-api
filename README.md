@@ -1,6 +1,6 @@
 # avaliacao-api
 
--Foi criado o projeto através.<br>
+-Foi criado o projeto através do website https://start.spring.io/.<br>
 -O banco de dados utilizado foi o Postgres e as tabelas foram criadas através do spring jpa utilizando o arquivo application.properties com a opção spring.jpa.hibernate.ddl-auto=update.<br>
 -As inserções dos dados da tabela Categoria foram realizados através do ícone "Add new row" do DBeaver.<br>
 -Foram criadas as estruturas das camadas conforme o documento da avaliação.<br>
