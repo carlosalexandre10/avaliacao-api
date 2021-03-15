@@ -1,7 +1,8 @@
 # avaliacao-api
 
--O banco de dados utilizado foi o Postgres e as tabelas foram criadas atráves do spring jpa utilizando o arquivo application.properties com a opção spring.jpa.hibernate.ddl-auto=update.<br>
--As inserções dos dados da tabela Categoria foram realizados atráves do ícone "Add new row" do DBeaver.<br>
+-Foi criado o projeto através.<br>
+-O banco de dados utilizado foi o Postgres e as tabelas foram criadas através do spring jpa utilizando o arquivo application.properties com a opção spring.jpa.hibernate.ddl-auto=update.<br>
+-As inserções dos dados da tabela Categoria foram realizados através do ícone "Add new row" do DBeaver.<br>
 -Foram criadas as estruturas das camadas conforme o documento da avaliação.<br>
 -Foram criadas as models Curso e Categoria e depois mapeadas com o javax.persistence.<br>
 -Foi utilizado o lombok para produtividade e redução de código.<br>
